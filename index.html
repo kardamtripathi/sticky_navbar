@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        #header{
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #logo {
+            width: 150px;
+            height: auto;
+            margin-top: 50px;
+        }
+
+        nav {
+            background-color: aquamarine;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        nav ul li {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #mainImg {
+            width: 70%;
+            margin: 30px 10px;
+            border-radius: 10px;
+        }
+
+        p {
+            text-align: justify;
+            padding: 30px;
+            font-size: 20px;
+        }
+
+        .sticky{
+            position: fixed;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <img src="https://img.freepik.com/free-icon/diamond_318-195446.jpg" alt="Logo" id="logo">
+    </div>
+    <nav id="menuBar">
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Services</li>
+            <li>Help</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <img src="https://images.freeimages.com/images/large-previews/52b/beach-palmtrees-1361702.jpg" alt="Image"
+            id="mainImg">
+        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, illo! Quod commodi, corrupti
+            similique
+            nobis mollitia aspernatur dolore adipisci recusandae repellat in suscipit ab ullam? Itaque officia eveniet
+            nesciunt, voluptatibus, voluptas numquam consequuntur eos sunt, eaque suscipit exercitationem quaerat.
+            Voluptatibus sequi sed quos? Praesentium natus excepturi nihil ratione id optio nam non, exercitationem
+            error pariatur! Molestiae libero soluta animi laboriosam laudantium esse architecto quo cumque similique
+            quae earum quam quis illum odit, enim, porro tempora vero! Harum tenetur at eaque dicta, ratione in totam?
+            Numquam quibusdam recusandae maxime eos fugiat fuga, veritatis distinctio voluptate similique tempore, velit
+            saepe provident harum. Commodi error molestiae deleniti mollitia doloribus ea, itaque saepe dignissimos
+            ratione nostrum libero sint in sapiente recusandae laborum accusantium provident, nemo ipsum officiis hic
+            eius, aspernatur excepturi eligendi! Omnis repudiandae quaerat ipsam maxime velit sunt sequi similique
+            placeat illum optio recusandae vero sed molestiae consequatur incidunt voluptatum ullam deserunt iusto
+            cumque consectetur, iste quibusdam magnam. Quia, libero! Atque nam excepturi soluta rem quo esse et eligendi
+            harum totam dolorum fugiat quia, consectetur pariatur, corrupti rerum facilis similique. Deleniti
+            exercitationem, officiis amet quibusdam maxime recusandae excepturi ad officia alias ullam optio dolorem,
+            cum fuga iusto qui ipsum. Obcaecati consectetur sed repudiandae? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Dolore quidem error obcaecati in nemo quam iusto natus distinctio, amet eos ad impedit
+            labore harum doloremque odit eligendi nostrum saepe! Exercitationem animi nesciunt assumenda minima, aperiam
+            illo dolore repudiandae nobis sed repellat aliquid voluptas dolorem omnis deserunt quia dolorum iure
+            recusandae vero doloremque sint aspernatur quidem eligendi! Assumenda, officia adipisci numquam quae, eum
+            cum voluptatibus natus quidem voluptatem libero placeat quisquam fugiat nihil. Accusantium doloremque
+            obcaecati quia velit cupiditate eius quo beatae hic fugit, odit, voluptate debitis asperiores tenetur illum
+            inventore atque temporibus officiis voluptas! Ducimus sed neque sunt. Modi soluta saepe reiciendis eum.
+            Assumenda id fugit esse minus, illo voluptatibus rerum perspiciatis facere libero non consequatur pariatur
+            soluta cupiditate a fuga, possimus nisi ad rem doloribus exercitationem obcaecati, aspernatur voluptatum
+            sunt facilis. Quae nihil eaque tenetur nostrum laboriosam ullam voluptates, similique excepturi. Maxime non
+            ducimus vitae, magni in cum accusantium odit dolorum eveniet dolorem consequuntur aspernatur alias dolor
+            ipsa ad, distinctio voluptatibus aperiam quia ipsam a necessitatibus sed voluptate aut fuga. Odit illo
+            corrupti impedit veniam beatae veritatis recusandae, quae quisquam obcaecati laborum eveniet temporibus eius
+            vitae, molestiae a libero enim aspernatur dolore dicta reiciendis. Nam neque veniam exercitationem quidem?
+        </p>
+    </div>
+    <script>
+        window.addEventListener('scroll', function()
+        {
+            let menuBar = document.getElementById("menuBar");
+            if(window.pageYOffset >= 204){
+                menuBar.classList.add('sticky');
+            }
+            else{
+                menuBar.classList.remove('sticky');
+            }
+        })
+    </script>
+</body>
+
+</html>
